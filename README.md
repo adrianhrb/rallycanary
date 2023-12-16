@@ -46,7 +46,7 @@ Some functionalities will involve the use of sensitive information, so we will u
 
 The database that will be used in the project is PostgreSQL. _(The models are still under preparation)_
 
-## Contriburion 🖇️
+## Contribution 🖇️
 
 Feel free to contribute to the project in any way you want <3. I will be happy to receive help from experienced people to correct mistakes and learn, as I said the project will be a help to continue taking my first steps with Django. 😊
 
