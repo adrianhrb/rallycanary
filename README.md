@@ -6,7 +6,9 @@ A project for all [CCRA]('https://fcautomovilismo.com/') fans from the Canary Is
     <img src='img/portada.jpg'>
 </div>
 
-_The objetive is build a website where people can see information about Rallyes in the Canary Islands. The project will be developed with Django to continue learning this tool that I'm using in my studies_
+_- Miguel Ángel Suárez - Eduardo González, champions of the canary asphalt rally championship in the season 2023_
+
+The objetive is build a website where people can see information about Rallyes in the Canary Islands. The project will be developed with Django to continue learning this tool that I'm using in my studies
 <br>
 <br>
 
