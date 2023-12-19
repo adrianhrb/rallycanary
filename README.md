@@ -140,7 +140,7 @@ id_section int FK >- Section.id
 > [!IMPORTANT]
 > The database design is subject to change during the project development.
 
-## Contriburion 🖇️
+## Contribution 🖇️
 
 Feel free to contribute to the project in any way you want <3. I will be happy to receive help from experienced people to correct mistakes and learn, as I said the project will be a help to continue taking my first steps with Django. 😊
 
