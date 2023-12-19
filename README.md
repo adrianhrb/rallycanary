@@ -44,7 +44,101 @@ $ python3.X -m venv .venv --prompt mysite
 
 Some functionalities will involve the use of sensitive information, so we will use a `.env` file for this purpose. This file must be out of version control so you will need to create one. In the project (mostly in the settings.py file) there will be calls to a config function of the prettyconf library, all these calls are the information that the `.env` file must contain.
 
-The database that will be used in the project is PostgreSQL. _(The models are still under preparation)_
+### Database 💾
+
+The database that will be used in the project is PostgreSQL. This will help us to apply vectorial searches to allow user to search by various fields.
+
+The current design is:
+
+<div style='width:520px'>
+    <img src='img/database.png'>
+</div>
+
+_Database design was made with [QuickDB]('https://app.quickdatabasediagrams.com'). You can copy the code here below_
+
+```Database
+Brand
+--
+id int PK
+name string
+logo image
+manufacturer string
+
+Category
+--
+id int PK
+name string
+
+Car
+--
+id int PK
+brand string FK >- Brand.id
+category string FK >- Category.id
+name string
+model string
+image image
+active bool
+
+#  Team
+Team
+--
+id int PK
+name string
+director string
+foundation DateField
+
+Driver
+--
+id int PK
+team int FK >- Team.id
+car int FK >- Car.id
+name string
+surname string
+nationality string
+photo ImageField
+birthdate DateField
+codriver string
+
+#  Rally
+Season
+--
+id int PK
+year DateField
+status Enumerate
+location string
+logo ImageField
+
+Ranking
+--
+id int PK
+id_season int FK >- Season.id
+id_driver int FK >- Driver.id
+points int
+
+Rally
+--
+id int PK
+season int FK >- Season.id
+name string
+year DateField
+start DateTimeField
+end DateTimeField
+
+Section
+--
+id int PK
+distance float
+isTcPlus bool
+
+Rally-Section
+--
+id int PK
+id_rally int FK >- Rally.id
+id_section int FK >- Section.id
+```
+
+> [!IMPORTANT]
+> The database design is subject to change during the project development.
 
 ## Contriburion 🖇️
 
