@@ -50,7 +50,7 @@ The database that will be used in the project is PostgreSQL. This will help us t
 
 The current design is:
 
-<div style='width:620px'>
+<div style='width:820px'>
     <img src='img/database.png'>
 </div>
 
