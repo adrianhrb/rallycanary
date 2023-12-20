@@ -138,7 +138,7 @@ id_section int FK >- Section.id
 ```
 
 > [!IMPORTANT]
-> The database design is subject to change during the project development.
+> Account funtionalities are going to be implemented but using Django auth methods. The only addition will be a Profile for the user.
 
 ## Contribution 🖇️
 

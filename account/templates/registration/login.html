@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Login | RallyCanarias{% endblock %}
+
+{% block content %}
+  <h1>Iniciar sesión</h1>
+  {% if form.errors %}
+    <p>El usuario o la contraseña no coincide. Inténtalo de nuevo</p>
+  
+  {% else %}
+    <p>Identifícate en el siguiente formulario para iniciar sesión:</p>
+    <form action="{% url "login" %}" method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}">
+      <p><input type="submit" value="Iniciar sesión"></p>
+    </form>
+  {% endif %}
+
+
+{% endblock %}
