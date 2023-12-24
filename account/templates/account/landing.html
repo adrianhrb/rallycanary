@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}RallyCanarias{% endblock %}
+
+{% block content %}
+<h1>Bienvenido {{ request.user.first_name|default:request.user.username}}</h1>
+<p>Esta web es sobre los rallys en canarias.</p>
+{% endblock %}
