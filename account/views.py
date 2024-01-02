@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 
 def landing(request: HttpRequest) -> HttpResponse:
-    return render(request, 'account/langing.html')
+    return render(request, 'account/landing.html')
